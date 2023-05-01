@@ -1,6 +1,6 @@
 # My Study Site
 
-* Welcome to my Study Site! 
+* Welcome to My Study Site! 
 
 Here are the instructions on how to run it:
 
