@@ -1,6 +1,6 @@
 # My Study Site
 
-* Welcome to My Study Site! 
+* Welcome to My Study Site, an interactive study helper site.
 
 Here are the instructions on how to run it:
 
@@ -40,3 +40,7 @@ Note: The Flatpickr is a new library that has been integrated. It prevents the u
 3. This should get the page up-and-running.
 
 Note: Don't forget to install your dependecies if needed, use npm install in the terminal of the folder.
+
+# TO-DO 
+
+- Need to fully connect Login and Sign-up functionallity to back-end 
