@@ -1,0 +1,87 @@
+.list {
+    margin-top: 20px;
+}
+
+.list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.list li .task {
+    flex-grow: 1;
+}
+
+.list li button {
+    margin-left: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.2s ease-in-out;
+}
+
+li:hover {
+    background-color: #f7f7f7;
+}
+
+.task {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.task:hover {
+    overflow: visible;
+    white-space: normal;
+}
+
+.has-text-grey-light {
+    text-decoration: line-through;
+    color: #CCC;
+}
+
+html, body {
+    height: 100%;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+  
+#background-img {
+    /* Uncomment this and remove the "has-background-primary-light" in the html file */
+    /* background-image: url('https://wallpaper.dog/large/987756.jpg'); */
+    background-position: center;
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 100%;
+    overflow: hidden;
+    filter: blur(5px);
+  
+    /* width: 100%; */
+    height: 100%;
+  
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Study Website</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/main_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";>
+	<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+	<script src="../js/main.js"></script>
+</head>
+<body>
+ <div class="is-flex-direction-column is-align-items-center ">
+    <nav class="navbar has-background-black is-fullwidth" role="navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item has-text-light" href="main.html" >
+		    <img src="../images/brain.svg" alt="Brain" width="28" height="28" class="is-white" style="margin-right: 5px; ">
+				Study Page 
+		</a>
+        <a role="button" class="navbar-burger has-text-light" aria-label="menu" aria-expanded="false" data-target="mynavbar">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+		<button class="navbar-item button is-small is-light" style="position: absolute; top: 1rem; right: 1rem;">Settings</button>
+      </div>
+      <div id = "mynavbar" class="navbar-menu">
+        <div class="navbar-start has-background-black">
+          <a class="navbar-item has-text-light" href="pomodoro.html">Pomodoro Timer</a>
+          <a class="navbar-item has-text-light" href="video.html">Lofi Video</a>
+		  <a class="navbar-item has-text-light" href="todo.html">To-Do List</a>
+        </div>
+        <div class="navbar-end">
+			<div class="navbar-item">
+				<div class="buttons">
+					<a class="button is-light" href="login.html" id="login">Login</a>
+					<a class="button is-primary" href="signup.html" id="signup/logout">Sign up</a>
+				</div>
+			</div>
+        </div>
+      </nav>
+    </div>
+	<header>
+		
+	</header>
+	<main>
+		<div class="background has-background-primary-light">
+			<div id="background-img"></div>
+		</div>
+		<section class="section">
+			<div class="container">
+				<h1 class="title has-text-centered">Welcome to My Study Website</h1>
+				<p class="subtitle has-text-centered">Boost your productivity with our tools and resources</p>
+				<div class="columns">
+					<div class="column">
+						<div class="card">
+							<div class="card-content">
+								<p class="title has-text-centered">Pomodoro Timer</p>
+								<p class="subtitle has-text-centered">Use the Pomodoro Technique to manage your study sessions</p>
+								<a class="button is-primary is-fullwidth" href="pomodoro.html">Start a Timer</a>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="card">
+							<div class="card-content">
+								<p class="title has-text-centered">Lofi Video</p>
+								<p class="subtitle has-text-centered">Listen to some lofi music while you study or relax</p>
+								<a class="button is-primary is-fullwidth" href="video.html">Watch a Video</a>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="card">
+							<div class="card-content">
+								<p class="title has-text-centered">To Do List</p>
+								<p class="subtitle has-text-centered">Add items you need to complete to stay organized</p>
+								<a class="button is-primary is-fullwidth" href="todo.html">Make a List</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+		<div id="customize-wallpaper">
+			<div id="link-question">
+				<div class="help">
+					<span class="hint">Enter a link to an image <br> to change the wallpaper!</span>
+					<img src="../images/question.png" alt="Need link help?">
+				</div>
+			</div>
+			<div id="link-box" class="link-box" contenteditable="true"></div>
+		</div>
+		
+	</main>
+</body>

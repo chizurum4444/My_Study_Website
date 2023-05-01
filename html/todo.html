@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-Do List</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+	<link rel="stylesheet" href="../css/todo_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="../js/todo.js"></script>
+
+</head>
+<body>
+	<div class="background has-background-primary-light">
+		<!-- <div id="background-img"></div> -->
+	</div>
+	<nav class="navbar has-background-black is-fullwidth" role="navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item has-text-light" href="main.html" >
+				<img src="../images/brain.svg" alt="Brain" width="28" height="28" class="is-white" style="margin-right: 5px; ">
+					Study Page 
+			</a>
+		</div>
+		<div id = "mynavbar" class="navbar-menu">
+			<div class="navbar-start">
+                <a class="navbar-item has-text-light" href="pomodoro.html">Pomodoro Timer </a>
+                <a class="navbar-item has-text-light" href="video.html">Lofi Video</a>
+                <a class="navbar-item has-text-light has-background-primary" href="todo.html" >To-Do List</a>
+			</div>
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons">
+						<a class="button is-light" href="login.html" id="login">Login</a>
+						<a class="button is-primary" href="signup.html" id="signup/logout">Sign up</a>
+					</div>
+				</div>
+			</div>
+	</nav>
+
+	<main>
+		<section class="section">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-one-third">
+						<h2 class="subtitle">Add a New Task</h2>
+						<form id="task-form">
+							<div class="field">
+								<label class="label">Task Name</label>
+								<div class="control">
+									<input id="todo-input" class="input" type="text" placeholder="Enter task name">
+								</div>
+							</div>
+							<div class="field">
+								<label class="label">Due Date</label>
+								<div class="control">
+								    <input id="date-input" class="input" type="text" placeholder="Select due date">
+								</div>
+							</div>
+							<div class="field">
+								<div class="control">
+									<button id="add-button" class="button is-primary">Add Task</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="column">
+						<h2 class="subtitle">Task List</h2>
+						<ul id="todo-list"></ul>
+                        <div id="error-message">
+                        </div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

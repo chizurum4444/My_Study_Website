@@ -1,0 +1,73 @@
+#start, #reset, #settings{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#timer {
+    font-family: "Space Grotesk", sans-serif;
+    color: black;
+    font-weight: 600;
+    letter-spacing: -0.25rem;
+    font-variant-numeric: tabular-nums;
+    font-size: 10vw;
+    text-align: center; 
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin-top: 15vh;
+}
+
+.column.is-full {
+    max-width: 600px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+html, body {
+    height: 100%;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+  
+ #background-img {
+    /* Uncomment this and remove the "has-background-primary-light" in the html file */
+    /* background-image: url('https://wallpaper.dog/large/987756.jpg'); */
+    background-position: center;
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 100%;
+    overflow: hidden;
+    filter: blur(5px);
+  
+    /* width: 100%; */
+    height: 100%;
+  
+}
+
+
+  

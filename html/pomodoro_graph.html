@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/pomodoro_graph.js"></script>
+    <link rel="stylesheet" href="../css/pomodoro_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" 
+    integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="has-background-primary-light is-fullheight">
+<nav class="navbar has-background-black is-fullwidth" role="navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item has-text-light"  href="main.html">
+		    <img src="../images/brain.svg" alt="Brain" width="28" height="28" class="is-white" style="margin-right: 5px; ">
+				Study Page 
+		</a>
+		</div>
+		<div id = "mynavbar" class="navbar-menu">
+			<div class="navbar-start">
+                <a class="navbar-item has-text-light has-background-primary" href="pomodoro.html">Pomodoro Timer </a>
+                <a class="navbar-item has-text-light" href="video.html">Lofi Video</a>
+                <a class="navbar-item has-text-light" href="todo.html" >To-Do List</a>
+			</div>
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons">
+                        <a class="button is-info" href="pomodoro_graph.html">Stats</a>
+						<a class="button is-light" href="login.html">Login</a>
+						<a class="button is-primary" href="signup.html">Sign up</a>
+					</div>
+				</div>
+			</div>
+	</nav>
+    <div id="app" class="container">
+        <div class="column is-full">
+            <h1 class="title is-1 has-text-centered" style="margin-top: 7rem;">Pomodoro Options</h1>
+            <div class="columns">
+                <div class="column has-text-centered" >
+                    <h2 class="subtitle is-3">Option 1</h2>
+                    <svg id="option1" viewBox="-1 -1 2 2" style="width: 200px; height: 200px    ;">
+                    <script>
+       
+                    </script>
+                    </svg>
+                    <p class="has-text-weight-bold">25:5 Ratio of Study:Break</p>
+                </div>
+                <div class="column has-text-centered">
+                    <h2 class="subtitle is-3">Option 2</h2>
+                    <svg viewBox="-1 -1 2 2" style="width: 200px; height: 200px;">
+                        <circle r="1" fill="#ddd"/>
+                        <path d="M 0 0 L 0 -1 A 1 1 0 0 1 0.587785 0.809017 Z" fill="#00d1b2">
+                            <animate attributeName="d" from="M 0 0 L 0 -1 A 1 1 0 0 1 0.5 -0.866 Z" to="M 0 0 L 0 -1 A 1 1 0 0 1 0.587785 0.809017 Z"  dur="1s" repeatCount="1"/>
+                        </path>
+                        <text x="0.4" y="-0.3" text-anchor="middle" font-size="0.2" class="has-text-weight-semibold has-text-primary">Break</text>
+                        <text x="0.4" y="-0.1" text-anchor="middle" font-size="0.15" class="has-text-primary">10</text>
+                        <text x="0" y="0.5" text-anchor="middle" font-size="0.2" class="has-text-weight-semibold has-text-primary">Study</text>
+                        <text x="0" y="0.7" text-anchor="middle" font-size="0.15" class="has-text-primary">25</text>
+                    </svg>
+                    <p class="has-text-weight-bold">25:10 Ratio of Study:Break</p>
+                </div>
+            </div>
+            <p class="has-text-centered">There are different options for the Pomodoro timer. Test out different ones to see which works best for you!</p>
+        </div>
+    </div>  
+</body>
+

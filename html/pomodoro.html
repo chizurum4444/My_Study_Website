@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="../css/pomodoro_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" 
+    integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="has-background-primary-light is-fullheight">
+
+<nav class="navbar has-background-black is-fullwidth" role="navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item has-text-light" href="main.html" >
+                <img src="../images/brain.svg" alt="Brain" width="28" height="28" class="is-white" style="margin-right: 5px; ">
+                    Study Page 
+		    </a>
+		</div>
+		<div id = "mynavbar" class="navbar-menu">
+			<div class="navbar-start">
+                <a class="navbar-item has-text-light has-background-primary" href="pomodoro.html">Pomodoro Timer </a>
+                <a class="navbar-item has-text-light" href="video.html">Lofi Video</a>
+                <a class="navbar-item has-text-light" href="todo.html" >To-Do List</a>
+			</div>
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons">
+                        <a class="button is-info" href="pomodoro_graph.html">Stats</a>
+						<a class="button is-light" href="login.html">Login</a>
+						<a class="button is-primary" href="signup.html">Sign up</a>
+					</div>
+				</div>
+			</div>
+	</nav>
+    <div id="app" class="container">
+        <div class="column is-full">
+        <div class="block">
+            <div class="buttons is-centered">
+                <button id="pomodoroTimer" class="button is-rounded is-black" :class="{'is-primary': studyTimeSelected}" @click="pomodoroTimerClicked">timer</button>
+                <button id="shortBreak" class="button is-rounded is-black has-text-light" :class="{'is-primary': shortTimeSelected}" @click="shortBreakClicked">short break</button>
+                <button id="longBreak" class="button is-rounded is-black has-text-light" :class="{'is-primary': longTimeSelected}" @click="longBreakClicked">long break</button>
+            </div>
+        </div>
+        <h1 id="timer">{{ timeDisplay }}</h1> 
+        <div class="block">
+            <div class="buttons is-centered" style="display: flex;  align-items: center;">
+                <img id="start" src="../images/start_button.png" v-if="paused" @click="startClicked" style="margin-right: 10px;">
+                <img id="start" src="../images/pause_button.png" v-else @click="pauseClicked" style="margin-right: 10px;">
+                <img id="reset" src="../images/reset_button.png" @click="resetClicked" style="margin-right: 10px;">
+                <img id="settings" src="../images/setting_button.png" @click="settingsClicked" style="margin-right: 10px;">
+            </div>
+        </div>
+
+        <div id="settingsMenu" class="box has-background-light" v-show="settingsMenuShown"> 
+        <h3 class="title is-3 has-text-left">settings</h3>
+        <div class="field">
+            <div class="control">
+                <label class="label">pomodoro:</label>
+                    <div class="control">
+                        <input id="userPomodoro" class="input" type="number" placeholder="25" v-model="userPomodoro">
+                    </div>
+                    <p class="help">minutes</p>
+            </div>
+            <div class="control">
+                <label class="label">short break:</label>
+                    <div class="control">
+                        <input id="userShortBreak" class="input" type="number" placeholder="5" v-model="userShortBreak">
+                    </div>
+                    <p class="help">minutes</p>
+            </div>
+            <div class="control">
+                <label class="label">long break:</label>
+                    <div class="control">
+                        <input id="userLongBreak" class="input" type="number" placeholder="10" v-model="userLongBreak">
+                    </div>
+                    <p class="help">minutes</p>
+            </div>
+            <div class="column">
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-primary" @click="saveUserTime">save</button>
+                </div>
+                <div class="control">
+                    <button class="button is-primary" @click="resetUserTime">reset</button>
+                </div>
+                <div class="control">
+                    <button class="button is-primary" @click="settingsClicked">cancel</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        
+        </div>
+    </div>
+</body>
+<footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" 
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../js/pomodoro.js"></script>
+</footer>
+
+</html>
