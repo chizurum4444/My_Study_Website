@@ -2,7 +2,7 @@
 
 * Welcome to My Study Site, an interactive study helper site.
 
-Here are the instructions on how to run it:
+# Here are the instructions on how to run it:
 
 1. Open CMD and navigate to "public/js".
 
